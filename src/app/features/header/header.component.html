@@ -1,0 +1,16 @@
+<mat-toolbar color="primary" class="header-nav mat-toolbar-single-row">
+  <span (mouseenter)="scatteryTooltip.show()" (mouseleave)="scatteryTooltip.hide()" #scatteryTooltip="matTooltip"
+        matTooltip="Scattery says Hi!" matTooltipPosition="below">
+    <mat-icon>adb</mat-icon>
+  </span>
+  <span>
+    <a (mouseenter)="gitHubTooltip.show()" (mouseleave)="gitHubTooltip.hide()" #gitHubTooltip="matTooltip"
+       href="{{helperPaths.gitHubPath}}" matTooltip="Glasses on with GitHub!" matTooltipPosition="below">
+      <mat-icon>code</mat-icon>
+    </a>
+    <a (mouseenter)="linkedInTooltip.show()" (mouseleave)="linkedInTooltip.hide()" #linkedInTooltip="matTooltip"
+       href="{{helperPaths.linkedInPath}}" matTooltip="Drop your message on LinkedIn :)" matTooltipPosition="below">
+      <mat-icon>near_me</mat-icon>
+    </a>
+  </span>
+</mat-toolbar>

@@ -1,0 +1,1 @@
+{"ast":null,"code":"export let HelperStrings = /*#__PURE__*/(() => {\n  class HelperStrings {}\n\n  HelperStrings.gitHubPath = 'https://github.com/devNextDoor/devNextDoor.github.io';\n  HelperStrings.octoCatGifPath = 'src/assets/images/octo-cat.gif';\n  return HelperStrings;\n})();","map":null,"metadata":{},"sourceType":"module"}

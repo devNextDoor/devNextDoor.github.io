@@ -1,0 +1,26 @@
+<div class="content-block">
+  <mat-card class="root-content-card">
+    <mat-form-field appearance="standard">
+      <mat-label>Your name list</mat-label>
+      <textarea matInput name="emailCsv" value="" rows="5" cols="30" [formControl]="emailFormObject" placeholder="Ada; Rita; John"></textarea>
+    </mat-form-field>
+    <mat-form-field appearance="standard">
+      <mat-label>Want to tag this list?</mat-label>
+      <input matInput type="text" name="tag" maxlength="20" placeholder="#angular-chats" [formControl]="tagFormObject" />
+      <mat-hint>(optional)</mat-hint>
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="onFormSubmit()">Scatter</button>
+    <mat-chip-list>
+      <mat-chip *ngFor="let val of storageLengthItr; let i = index"
+                (removed)="deleteTag(i)" (click)="setTagForReuse(i)">
+        {{localStorage.key(i)}}
+        <!--<button mat-fab color="basic">
+          <mat-icon>redo</mat-icon>
+        </button>-->
+        <button matChipRemove>
+          <mat-icon>delete</mat-icon>
+        </button>
+      </mat-chip>
+    </mat-chip-list>
+  </mat-card>
+</div>
